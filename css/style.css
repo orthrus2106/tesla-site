@@ -57,6 +57,7 @@ h3{
   max-width: 1040px;
   padding: 0 10px;
   margin: 0 auto;
+  /* border: 2px solid red; */
 }
 
 .header{
@@ -443,4 +444,26 @@ h3{
   width: 8px;
   height: 8px;
   background-color: #4177DC;
+}
+
+@media (max-width: 560px) {
+  .promo-img{
+    width: 300px;
+    height: 200px;
+    margin-bottom: 40px;
+  }
+  
+  .promo__stats {
+    display: flex;
+    color: #fff;
+    gap: 0 50px;
+  }
+
+  .blog__inner{
+    flex-direction: column;
+  }
+
+  .menu__list{
+    display: none;
+  }
 }
