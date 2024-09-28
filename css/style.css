@@ -466,4 +466,7 @@ h3{
   .menu__list{
     display: none;
   }
+  .popular__inner{
+    display: none;
+  }
 }
