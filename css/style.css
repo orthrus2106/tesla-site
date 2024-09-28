@@ -54,8 +54,8 @@ h3{
 }
 
 .container{
-  max-width: 1040px;
-  padding: 0 10px;
+  max-width: 1070px;
+  padding: 0 25px;
   margin: 0 auto;
   /* border: 2px solid red; */
 }
@@ -68,6 +68,17 @@ h3{
 .menu{
   display: flex;
   justify-content: space-between;
+}
+
+.menu__burger{
+  display: none;
+}
+
+.menu__burger span{
+  width: 18px;
+  height: 2px;
+  margin-bottom: 4px;
+  background-color: #fff;
 }
 
 .menu__list{
@@ -467,6 +478,12 @@ h3{
   .menu__list{
     display: none;
   }
+
+  .menu__burger{
+    display: flex;
+    flex-direction: column;
+  }
+
   .popular__inner{
     display: none;
   }
