@@ -135,6 +135,7 @@ h3{
   display: flex;
   color: #fff;
   gap: 0 105px;
+  padding: 0 10px;
 }
 
 .promo__stats-item {
