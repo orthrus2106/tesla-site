@@ -338,15 +338,23 @@ h3{
 }
 
 .popular__slider {
+  overflow: hidden; /* Скрываем карточки за пределами видимой области */
+  position: relative; /* Для корректного позиционирования */
+  padding: 0 100px; /* Если необходимо */
+}
+
+.slider-track {
   display: flex;
   gap: 0 50px;
-  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+  /* Устанавливаем ширину трека, чтобы вместить все карточки */
+  width: calc((258px + 50px) * 6); /* 6 карточек по 258px и gap 50px */
   margin-bottom: 50px;
 }
 
 .slider-card {
   position: relative;
-  width: 258px;
+  flex: 0 0 258px; /* Фиксированная ширина карточек с flex-grow: 0 и flex-shrink: 0 */
   height: 328px;
   border-radius: 20px;
   background-color: #111213;
@@ -356,7 +364,9 @@ h3{
   padding-left: 25px;
   padding-top: 32px;
   padding-bottom: 24px;
+  box-sizing: border-box;
   overflow: hidden;
+  z-index: 1;
 }
 
 .slider-title {
@@ -431,11 +441,11 @@ h3{
   position: absolute;
   height: 190px;
   width: 190px;
-  left: -30px;
+  left: -100px;
   top: -40px;
   background: rgba(55, 74, 109, 0.5);
   filter: blur(60px);
-  z-index: 0;
+  z-index: -1;
 }
 
 .slider__nav{
@@ -485,6 +495,5 @@ h3{
   }
 
   .popular__inner{
-    display: none;
   }
 }
